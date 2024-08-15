@@ -1,16 +1,5 @@
 /*
-COLOR PALETTE
-
-Dark green    #3c8453
-Sandy beige   #bcaa96
-Dark gray     #222222
-Light gray    #d3d4d6
-Off-white     #f6f6f6
-*/
-
-/*
 MY COLOR PALETTE
-
 black         #2e2e2f
 my sky blue   #1aa0f6
 my med blue   #1d499c
@@ -18,129 +7,82 @@ my bright blue    #0b8ce8
 ghost-white   #f8f8ff
 */
 
-
-/* Global  Styles
-____________________________________ */
-
-/* 
-  https://www.paulirish.com/2012/box-sizing-border-box-ftw/
-*/
-html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-html, body {
+body {
     /* make the background image fill the entire height of viewport */
     height: 100%;
-}
-body {
-    background: #f8f8ff;
+    width: 100%;
+    background: #1d499c;
     margin: 0;
 }
-.btn {
+
+#site-info{
+    position: relative;;
+    background-color: #2e2e2f;
+    color: #1aa0f6;
+    font-family: 'Verdana',Arial, Calibri, sans-serif;
+    position: relative;
+    margin: .5rem 0 0 0;
+    padding: 0.5rem;
+    width: 100%;
+    height: 20%;
+}
+
+#page-info{
     background-color: #1aa0f6;
+    color: #2e2e2f;
+    width: 100%;
+    height: 80%;
 }
 .content-wrapper {
     /* for centering content */
     margin: 0 auto;
     padding: 30px;
-    max-width: 900px;
-}
- 
-/* Home Page Styles
-_____________________________________ */
-.home {
-    /* Photo from unsplash.com*/
-    background-image: url(../images/karen/bg-office-blue.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-/* descendent selector */
-.home .content-wrapper {
-    /* medium blue background at 50% opacity*/
-    /* for opacity values see  https://davidwalsh.name/hex-opacity*/
-    background-color: #1d499c80;
-    background-color: #1d499c80;
-    color: white;
+    max-width: 500px;
+    background-color:yellow;
 }
 
-.home .content-wrapper a {
-    color: yellow;
-}
-.home .content-wrapper a:hover {
-    color: lightyellow;
-    text-decoration: none;
-
-}
-/* Links Styles
-____________________________________ */
-
-
-/* Resume Styles
-_____________________________________ */
-.resume header::before {
-    /* Photo from unsplash.com*/
-    background-image: url(../images/karen/bg-office-blue2.jpg);
-    background-position: center;
-    background-size: cover;
-    content: "";
-    display: block;
-    height: 375px;
-
-}
-.resume-section {
-    margin-bottom: 50px;
-}
-.resume-section h2 {
-    border-bottom: 2px dashed #1aa0f6;
-}
-.download-link {
-    position: fixed;
-    top: 5px;
-    left: 5px;
-}
-
-/* Project
-_____________________________________ */
-.project-item {
-    /* keep project elements floated or not within their containers */
-    display: flow-root;
-    margin: 30px 0;
-}
-.project-item img {
-    width: 300px;
-    float: left;
-    margin-right: 20px;
-
-}
-
-/* Footer Styles
-_____________________________________ */
-footer {
+footer{
     position: relative;
     bottom: 0;
     background-color: #2e2e2f;
     color: #1aa0f6;
+    font-family: 'Verdana',Arial, Calibri, sans-serif;
+    width: 100%;
+    height: 10%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    
 }
-footer a {
+footer#copyright{
+    float: left;
+}
+footer ul{
+    list-style: none;
+    background-color: #2e2e2f;
+    color: #1aa0f6;
+    margin: .5rem;
+}
+footer li{
+    /*float: left;*/
+    float: right;
+    margin: 1rem;
+    padding: .5rem;
+    font-size: x-large;
+}
+footer a{
+    text-decoration: none;
+    background-color: #2e2e2f;
     color:yellow;
 }
 footer a:hover {
     color:lightyellow;
     text-decoration: none;
 }
-.socials {
-    /*remove bullet style format on list */
-    list-style-type: none;
-    padding: 0;
+footer a:visited{
+    color:lightyellow;
 }
-.socials li {
-    /* set them to display side by side */
-    display: inline-block;
-}
-.socials img {
-    /* change the size of the icons */
-    width: 32px;
+footer::after{
+    content: "";
+    clear: both;
+    display: block;
 }
